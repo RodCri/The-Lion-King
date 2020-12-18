@@ -1,0 +1,5 @@
+npm init -y
+npm i --global gulp-cli
+npm i gulp --save-dev
+npm i --save-dev gulp-sass
+npm i --save-dev del
