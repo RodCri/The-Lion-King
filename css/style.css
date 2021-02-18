@@ -4,14 +4,20 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Andika New Basic', sans-serif; }
+  font-family: 'Andika New Basic', sans-serif; 
+  background-color: #fff;
+}
 
 main {
   background-image: url("../img/thelyonking.jpg");
+  background-color: #fff;
   background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh; }
+  background-position: right;
+  background-repeat: repeat;
+  width: 100%;
+  height: auto;
+  overflow: hidden; 
+}
 
 .content {
   width: 32%;
@@ -39,10 +45,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20% 0 10% 0; }
+  margin: 10% 0 10% 0; }
 
 .content-logo img {
-  width: 105%;
+  width: 100%;
   padding-bottom: 2%; }
 
 .content-logo p {
@@ -53,12 +59,33 @@ main {
 
 .content-movies {
   display: flex;
-  flex-direction: row; }
-
-.content-movies img {
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+img{
+  width: 100%;
+  max-width: 100%;
+}
+.trailer-1{
   width: 50%;
-  padding-right: 2%; }
-
+  position: relative;
+}
+.trailer-2{
+  width: 50%;
+  position: relative;
+}
+.trailer-img {
+  z-index: -1;  
+}
+.play{
+  position: absolute;
+  width: 20%;
+  top: 30%;
+  left: 40%;
+  
+}
 .content-places {
   display: flex;
   flex-direction: column;
@@ -82,3 +109,25 @@ main {
 
 .content-places span strong {
   color: #f5bb32; }
+
+@media(max-width:800px) and (min-width:600px){
+  .content{
+    width: 50%;
+  }
+  main{
+    background-position: center;
+  }
+}
+@media(max-width:600px) and (min-width:320px){
+  .content{
+    width: 100%;
+    
+    background-color: rgba(144, 145, 147, 0.3);
+  }
+  main{
+    background-image: none;
+  }
+  .content-rights{
+    display: none;
+  }
+}
